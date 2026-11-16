@@ -3,20 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR — тестовая страница</title>
+  <title>QR-гид по Ульяновску</title>
+  <meta name="description" content="Интерактивный QR-гид по Ульяновску: Ветровой орган, Музей балалайки, Памятник влюблённым студентам и квест «Колобок».">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="card">
-    <div class="qr" aria-hidden="true">
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-    </div>
-    <h1>Привет! Это тестовая страница test</h1>
-    <p>Она выложена на GitHub Pages автоматически — через GitHub Actions.</p>
-    <p class="hint">Каждый пуш в ветку <code>main</code> обновляет сайт.</p>
-  </main>
+  <div class="wrap">
+    <header>
+      <p class="kicker">Интерактивный путеводитель</p>
+      <h1>QR-гид по Ульяновску</h1>
+      <p class="lead">
+        Наведите камеру смартфона на QR-код из презентации — откроется страница
+        достопримечательности с фото, историей и адресом. Или просто выберите объект ниже.
+      </p>
+    </header>
+
+    <nav class="cards">
+      <a class="card" href="vetrovoy-organ.html">
+        <span class="num">01</span>
+        <h2>Ветровой орган</h2>
+        <p>Кузнечная скульптура в центре города, которая поёт на ветру.</p>
+      </a>
+      <a class="card" href="muzej-balalajki.html">
+        <span class="num">02</span>
+        <h2>Музей балалайки</h2>
+        <p>Единственный в России музей истории самого русского инструмента.</p>
+      </a>
+      <a class="card" href="pamyatnik-studentam.html">
+        <span class="num">03</span>
+        <h2>Памятник влюблённым студентам</h2>
+        <p>Самое романтичное место города на бульваре «Новый Венец».</p>
+      </a>
+      <a class="card" href="kolobok.html">
+        <span class="num">04</span>
+        <h2>Квест «Колобок»</h2>
+        <p>Восемь бронзовых колобков и пешеходный квест по центру Ульяновска.</p>
+      </a>
+    </nav>
+
+    <footer>
+      QR-гид по Ульяновску · Индивидуальный проект по информатике · Ульяновск, 2026
+    </footer>
+  </div>
 </body>
 </html>

@@ -4,72 +4,178 @@
   box-sizing: border-box;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  color: #eaeaea;
-  padding: 24px;
+:root {
+  --text: #eaeaea;
+  --muted: #b8b8d1;
+  --faint: #7f8bb3;
+  --accent: #e9b44c;
+  --card: rgba(255, 255, 255, 0.05);
+  --line: rgba(255, 255, 255, 0.1);
 }
 
-.card {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 48px 40px;
-  max-width: 420px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+body {
+  min-height: 100vh;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  padding: 32px 20px 48px;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.back {
+  display: inline-block;
+  color: var(--faint);
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+}
+
+.back:hover {
+  color: var(--accent);
+}
+
+.kicker {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 h1 {
-  font-size: 1.6rem;
-  margin-bottom: 12px;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  line-height: 1.2;
+  margin-bottom: 14px;
 }
 
-p {
-  color: #b8b8d1;
-  line-height: 1.6;
-  margin-bottom: 8px;
+.lead {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 620px;
+  margin-bottom: 32px;
 }
 
-.hint {
-  font-size: 0.9rem;
-  color: #7f8bb3;
-}
-
-code {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2px 8px;
-  border-radius: 6px;
-}
-
-.qr {
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 24px;
+.cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-  padding: 10px;
-  background: #eaeaea;
-  border-radius: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 36px;
 }
 
-.qr span {
-  background: #16213e;
-  border-radius: 2px;
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px 24px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.15s ease, border-color 0.15s ease;
 }
 
-.qr span:nth-child(1),
-.qr span:nth-child(4),
-.qr span:nth-child(13),
-.qr span:nth-child(16),
-.qr span:nth-child(6),
-.qr span:nth-child(11) {
-  background: transparent;
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.card .num {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin: 8px 0 6px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.photo {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+
+article p {
+  color: var(--muted);
+  margin-bottom: 16px;
+  font-size: 1.02rem;
+}
+
+.facts {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px 26px;
+  margin-top: 12px;
+  backdrop-filter: blur(8px);
+}
+
+.facts h2 {
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+}
+
+.facts ul {
+  list-style: none;
+}
+
+.facts li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 9px 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.97rem;
+}
+
+.facts li:first-child {
+  border-top: none;
+}
+
+.facts span {
+  color: var(--faint);
+}
+
+.facts b {
+  text-align: right;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 44px;
+  color: var(--faint);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--faint);
+}
+
+@media (max-width: 520px) {
+  .facts li {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .facts b {
+    text-align: left;
+  }
 }
