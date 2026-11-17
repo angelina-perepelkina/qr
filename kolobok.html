@@ -8,6 +8,54 @@
 <meta name="theme-color" content="#111b30">
 <link rel="canonical" href="https://angelina-perepelkina.github.io/qr/kolobok.html">
 <link rel="stylesheet" href="style.css?v=20261118">
+<style>
+/* Additions scoped to the Kolobok list; the shared style.css is unchanged. */
+.koloboks{margin:34px 0 30px;scroll-margin-top:24px}
+.koloboks .list-intro{color:var(--muted);font-size:17px;line-height:1.65;max-width:760px}
+.koloboks .list-meta{color:var(--muted);font-size:13px;margin-top:-6px}
+.koloboks .list-jumps{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 28px}
+.koloboks .list-jumps a{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;
+border:1px solid var(--line);border-radius:999px;font-size:14px;text-decoration:none;line-height:1.4}
+.koloboks .list-jumps a:hover{border-color:var(--accent)}
+.koloboks .list-group{margin-top:28px;scroll-margin-top:24px}
+.koloboks .list-group h3{font-size:22px;margin:0 0 7px;line-height:1.35}
+.koloboks .group-caption{color:var(--muted);font-size:15px;margin-bottom:17px}
+.koloboks .kolobok-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.koloboks .kolobok-item{display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:14px;
+align-items:start;padding:21px 22px;border:1px solid var(--line);
+border-radius:16px;background:var(--panel-soft);scroll-margin-top:24px}
+.koloboks .item-num{display:flex;align-items:center;justify-content:center;width:36px;height:36px;
+border:1px solid var(--line);border-radius:50%;color:var(--accent);font-size:13px;font-weight:750}
+.koloboks .item-copy{min-width:0}
+.koloboks .item-copy h4{font-size:19px;line-height:1.4;margin:3px 0 7px;overflow-wrap:anywhere}
+.koloboks .item-copy p{color:var(--muted);font-size:16px;line-height:1.6;margin:0 0 8px}
+.koloboks .item-copy .item-place{font-size:14px;margin:0}
+.koloboks .item-place b{color:var(--text);font-weight:600}
+.koloboks .item-map{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+min-height:44px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+text-decoration:none;font-size:14px;line-height:1.4;white-space:nowrap}
+.koloboks .item-map:hover{border-color:var(--accent);text-decoration:underline}
+.koloboks .list-caution{font-size:14px;color:var(--muted);line-height:1.6;margin:22px 0 0}
+.koloboks .list-references{margin-top:20px;padding-top:12px;border-top:1px solid var(--line)}
+.koloboks .list-references ul{padding-left:20px;margin:10px 0 0;font-size:14px}
+.koloboks .list-references li{margin-bottom:9px}
+.koloboks .list-references a{overflow-wrap:anywhere}
+@media(max-width:600px){
+.koloboks .kolobok-item{grid-template-columns:30px minmax(0,1fr);gap:11px;padding:17px 16px}
+.koloboks .item-num{width:30px;height:30px;font-size:12px}
+.koloboks .item-copy h4{font-size:18px;margin-top:2px}
+.koloboks .item-map{grid-column:2;justify-self:start}
+.koloboks .item-copy p{font-size:16px}
+.koloboks .item-copy .item-place{font-size:14px}
+.koloboks .list-group h3{font-size:21px}
+}
+@media print{
+.koloboks .list-jumps,.koloboks .item-map{display:none}
+.koloboks .kolobok-item{break-inside:avoid;grid-template-columns:30px minmax(0,1fr);
+padding:12px;gap:12px}
+.koloboks .list-group h3{break-after:avoid}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Перейти к содержанию</a>
@@ -16,9 +64,127 @@
 <main id="main"><a class="back" href="index.html">← Все страницы путеводителя</a>
 <header><p class="kicker">04 / 04 · Литературный квест</p><h1>Квест «Колобок»</h1><p class="lead">Ищите городские мини-скульптуры и знакомьтесь с литературной историей Симбирска-Ульяновска.</p></header>
 <div class="actions"><a class="button" href="https://ulyanovsk.travel/map-kolobok.php" target="_blank" rel="noopener noreferrer">Карта колобков ↗</a><a class="button secondary" href="https://ulyanovsk.travel/catalog.php?category=kolobok" target="_blank" rel="noopener noreferrer">Квест на туристическом портале ↗</a></div>
-<section class="overview" aria-label="Фотография и основные сведения"><figure><img class="photo" src="img/kolobok.jpg" alt="Бронзовая фигурка Колобка с геологическим молотком и образцами минералов" width="800" height="800"><figcaption>Фотография из материалов учебного проекта.</figcaption></figure><div><section class="facts"><h2>Коротко о главном</h2><dl><div class="fact"><dt>Начало городского проекта</dt><dd>2024</dd></div><div class="fact"><dt>Формат</dt><dd>Поиск мини-скульптур и литературных историй</dd></div><div class="fact"><dt>Карта и список</dt><dd>На туристическом портале Ульяновска</dd></div></dl></section><p class="notice">Квест расширяется: 8 июля 2026 года на набережной Свияги появились ещё три литературных колобка. Перед прогулкой сверяйтесь с актуальной картой.</p></div></section>
+<section class="overview" aria-label="Фотография и основные сведения"><figure><img class="photo" src="img/kolobok.jpg" alt="Бронзовая фигурка Колобка с геологическим молотком и образцами минералов" width="800" height="800"><figcaption>На фотографии — колобок-геолог у «Симбирцита», отдельная городская скульптура (<a href="#kolobok-geolog">пункт 12</a>). Фотография из материалов учебного проекта.</figcaption></figure><div><section class="facts"><h2>Коротко о главном</h2><dl><div class="fact"><dt>Начало городского проекта</dt><dd>2024</dd></div><div class="fact"><dt>Формат</dt><dd>Поиск мини-скульптур и литературных историй</dd></div><div class="fact"><dt>Карта и список</dt><dd>На туристическом портале Ульяновска</dd></div></dl></section><p class="notice">Квест расширяется: 8 июля 2026 года на набережной Свияги появились ещё три литературных колобка. Перед прогулкой сверяйтесь с актуальной картой.</p></div></section>
 <div class="reading"><article><h2>История и детали</h2><p>Городской проект «Туристический квест колобков в Симбирске-Ульяновске» запущен в 2024 году. Его концепцию разработала дирекция «Ульяновск — литературный город ЮНЕСКО», а художником проекта стал Дмитрий Бобрович.</p><p>Образ Колобка связан с туристической традицией города. В 2011 году Ульяновск обозначили как его родину на «Сказочной карте России». Эта связь опирается на краеведческую интерпретацию слова «колебятка», а не на достоверно установленное место возникновения сказки.</p></article>
 <section class="look"><h2>С чего начать прогулку</h2><p>Выберите на карте несколько фигурок рядом друг с другом. У каждой остановки рассмотрите детали, прочитайте подпись и откройте рассказ по установленному QR-коду. Порядок посещения выбираете вы.</p><ul class="examples"><li><b>Колобок-Обломов</b><span>Связан с Иваном Гончаровым и его литературным героем.</span></li><li><b>Колобок-девочка</b><span>Напоминает о Сергее Аксакове и сказке «Аленький цветочек».</span></li><li><b>Колобок-гусар</b><span>Знакомит с поэтом и героем войны Денисом Давыдовым.</span></li></ul></section>
+<section class="koloboks" id="all-kolobki" aria-labelledby="all-kolobki-title">
+<p class="kicker">12 остановок для знакомства с городом</p>
+<h2 id="all-kolobki-title">Полный список колобков</h2>
+<p class="list-intro">Ниже — все 11 персонажей литературного квеста и ещё один городской колобок — геолог у музея-салона «Симбирцит». Они разделены на группы, чтобы было удобнее выбрать места для прогулки.</p>
+<p class="list-meta">Список сверен по опубликованным источникам 18 ноября 2026 года.</p>
+<nav class="list-jumps" aria-label="Разделы списка колобков">
+<a href="#kolobki-centre">Центр · 8</a><a href="#kolobki-sviyaga">Свияга · 3</a><a href="#kolobki-extra">Геолог · 1</a>
+</nav>
+<section class="list-group" id="kolobki-centre" aria-labelledby="kolobki-centre-title">
+<h3 id="kolobki-centre-title">Центр города · 8 фигурок</h3>
+<p class="group-caption">Первый этап литературного квеста: Новый Венец и соседние улицы.</p>
+<ol class="kolobok-list" start="1" role="list">
+<li class="kolobok-item" id="kolobok-kolebyatka">
+<span class="item-num" aria-hidden="true">01</span>
+<div class="item-copy"><h4>Колобок-колебятка</h4>
+<p>Колобок верхом на голубе знакомит с образом симбирской колебятки.</p>
+<p class="item-place"><b>Где искать:</b> У здания филармонии, на бульваре Новый Венец.</p></div>
+<a class="item-map" href="https://yandex.ru/maps/?ll=48.404770%2C54.313240&amp;z=18&amp;pt=48.404770%2C54.313240%2Cpm2rdm" target="_blank" rel="noopener noreferrer" aria-label="Колобок-колебятка: на карте (откроется новая вкладка)">На карте <span aria-hidden="true">↗</span></a>
+</li>
+<li class="kolobok-item" id="kolobok-olenka">
+<span class="item-num" aria-hidden="true">02</span>
+<div class="item-copy"><h4>Колобок-девочка (Оленька)</h4>
+<p>Сергей Аксаков и сказка «Аленький цветочек».</p>
+<p class="item-place"><b>Где искать:</b> Смотровая площадка на Новом Венце, напротив Троицкого переулка.</p></div>
+<a class="item-map" href="https://yandex.ru/maps/?ll=48.406300%2C54.314408&amp;z=18&amp;pt=48.406300%2C54.314408%2Cpm2rdm" target="_blank" rel="noopener noreferrer" aria-label="Колобок-девочка (Оленька): на карте (откроется новая вкладка)">На карте <span aria-hidden="true">↗</span></a>
+</li>
+<li class="kolobok-item" id="kolobok-gusar">
+<span class="item-num" aria-hidden="true">03</span>
+<div class="item-copy"><h4>Колобок-гусар</h4>
+<p>Денис Давыдов — поэт и герой войны 1812 года.</p>
+<p class="item-place"><b>Где искать:</b> У здания аграрного университета на бульваре Новый Венец.</p></div>
+<a class="item-map" href="https://yandex.ru/maps/?ll=48.405540%2C54.314480&amp;z=18&amp;pt=48.405540%2C54.314480%2Cpm2rdm" target="_blank" rel="noopener noreferrer" aria-label="Колобок-гусар: на карте (откроется новая вкладка)">На карте <span aria-hidden="true">↗</span></a>
+</li>
+<li class="kolobok-item" id="kolobok-oblomov">
+<span class="item-num" aria-hidden="true">04</span>
+<div class="item-copy"><h4>Колобок-Обломов</h4>
+<p>Иван Гончаров и герой его романа «Обломов».</p>
+<p class="item-place"><b>Где искать:</b> На Новом Венце, возле краеведческого музея имени И. А. Гончарова.</p></div>
+<a class="item-map" href="https://yandex.ru/maps/?ll=48.406518%2C54.315245&amp;z=18&amp;pt=48.406518%2C54.315245%2Cpm2rdm" target="_blank" rel="noopener noreferrer" aria-label="Колобок-Обломов: на карте (откроется новая вкладка)">На карте <span aria-hidden="true">↗</span></a>
+</li>
+<li class="kolobok-item" id="kolobok-istorik">
+<span class="item-num" aria-hidden="true">05</span>
+<div class="item-copy"><h4>Колобок-историк</h4>
+<p>Николай Карамзин и «История государства Российского».</p>
+<p class="item-place"><b>Где искать:</b> У входа в Карамзинский сквер, на фонарном столбе.</p></div>
+<a class="item-map" href="https://yandex.ru/maps/?ll=48.402550%2C54.316784&amp;z=18&amp;pt=48.402550%2C54.316784%2Cpm2rdm" target="_blank" rel="noopener noreferrer" aria-label="Колобок-историк: на карте (откроется новая вкладка)">На карте <span aria-hidden="true">↗</span></a>
+</li>
+<li class="kolobok-item" id="kolobok-poet">
+<span class="item-num" aria-hidden="true">06</span>
+<div class="item-copy"><h4>Колобок-поэт</h4>
+<p>Николай Языков и литературная жизнь Симбирска.</p>
+<p class="item-place"><b>Где искать:</b> Возле литературного музея «Дом Языковых».</p></div>
+<a class="item-map" href="https://yandex.ru/maps/?ll=48.403304%2C54.318133&amp;z=18&amp;pt=48.403304%2C54.318133%2Cpm2rdm" target="_blank" rel="noopener noreferrer" aria-label="Колобок-поэт: на карте (откроется новая вкладка)">На карте <span aria-hidden="true">↗</span></a>
+</li>
+<li class="kolobok-item" id="kolobok-unesco">
+<span class="item-num" aria-hidden="true">07</span>
+<div class="item-copy"><h4>Колобок-ЮНЕСКО</h4>
+<p>Напоминание о статусе Ульяновска как литературного города ЮНЕСКО.</p>
+<p class="item-place"><b>Где искать:</b> У фонтана на эспланаде, рядом с педагогическим университетом.</p></div>
+<a class="item-map" href="https://yandex.ru/maps/?ll=48.408209%2C54.317262&amp;z=18&amp;pt=48.408209%2C54.317262%2Cpm2rdm" target="_blank" rel="noopener noreferrer" aria-label="Колобок-ЮНЕСКО: на карте (откроется новая вкладка)">На карте <span aria-hidden="true">↗</span></a>
+</li>
+<li class="kolobok-item" id="kolobok-kazak">
+<span class="item-num" aria-hidden="true">08</span>
+<div class="item-copy"><h4>Колобок-казак</h4>
+<p>Дмитрий Садовников и песня «Из-за острова на стрежень».</p>
+<p class="item-place"><b>Где искать:</b> На Новом Венце, у памятника Богдану Хитрово.</p></div>
+<a class="item-map" href="https://yandex.ru/maps/?ll=48.407933%2C54.318848&amp;z=18&amp;pt=48.407933%2C54.318848%2Cpm2rdm" target="_blank" rel="noopener noreferrer" aria-label="Колобок-казак: на карте (откроется новая вкладка)">На карте <span aria-hidden="true">↗</span></a>
+</li>
+</ol></section>
+<section class="list-group" id="kolobki-sviyaga" aria-labelledby="kolobki-sviyaga-title">
+<h3 id="kolobki-sviyaga-title">Набережная Свияги · 3 фигурки</h3>
+<p class="group-caption">Продолжение литературного квеста у ЖК «Аквамарин»: фигурки открыты 8 июля 2026 года.</p>
+<ol class="kolobok-list" start="9" role="list">
+<li class="kolobok-item" id="kolobok-shakhmatist">
+<span class="item-num" aria-hidden="true">09</span>
+<div class="item-copy"><h4>Колобок-шахматист</h4>
+<p>Дмитрий Ознобишин — поэт и переводчик. Герой изображён за шахматной доской.</p>
+<p class="item-place"><b>Где искать:</b> Набережная Свияги у ЖК «Аквамарин».</p></div>
+<a class="item-map" href="https://yandex.ru/maps/?ll=48.360056%2C54.311323&amp;z=18&amp;pt=48.360056%2C54.311323%2Cpm2rdm" target="_blank" rel="noopener noreferrer" aria-label="Колобок-шахматист: на карте (откроется новая вкладка)">На карте <span aria-hidden="true">↗</span></a>
+</li>
+<li class="kolobok-item" id="kolobok-guslyar">
+<span class="item-num" aria-hidden="true">10</span>
+<div class="item-copy"><h4>Колобок-гусляр</h4>
+<p>Степан Скиталец — писатель, поэт и гусляр. Фигурка сидит на селезне.</p>
+<p class="item-place"><b>Где искать:</b> Набережная Свияги у ЖК «Аквамарин».</p></div>
+<a class="item-map" href="https://yandex.ru/maps/?ll=48.362093%2C54.312007&amp;z=18&amp;pt=48.362093%2C54.312007%2Cpm2rdm" target="_blank" rel="noopener noreferrer" aria-label="Колобок-гусляр: на карте (откроется новая вкладка)">На карте <span aria-hidden="true">↗</span></a>
+</li>
+<li class="kolobok-item" id="kolobok-rybak">
+<span class="item-num" aria-hidden="true">11</span>
+<div class="item-copy"><h4>Колобок-рыбак</h4>
+<p>Сказочник Абрам Новопольцев. В руках у рыбака — судак.</p>
+<p class="item-place"><b>Где искать:</b> Набережная Свияги у ЖК «Аквамарин».</p></div>
+<a class="item-map" href="https://yandex.ru/maps/?ll=48.362550%2C54.312243&amp;z=18&amp;pt=48.362550%2C54.312243%2Cpm2rdm" target="_blank" rel="noopener noreferrer" aria-label="Колобок-рыбак: на карте (откроется новая вкладка)">На карте <span aria-hidden="true">↗</span></a>
+</li>
+</ol></section>
+<section class="list-group" id="kolobki-extra" aria-labelledby="kolobki-extra-title">
+<h3 id="kolobki-extra-title">Дополнительная остановка · колобок-геолог</h3>
+<p class="group-caption">Отдельная скульптура у «Симбирцита», не включённая в список 11 персонажей литературного квеста.</p>
+<ol class="kolobok-list" start="12" role="list">
+<li class="kolobok-item" id="kolobok-geolog">
+<span class="item-num" aria-hidden="true">12</span>
+<div class="item-copy"><h4>Колобок-геолог</h4>
+<p>Посвящён геологам и симбирциту. Автор скульптуры — Карэн Саркисов.</p>
+<p class="item-place"><b>Где искать:</b> У музея-салона «Симбирцит»: ул. Марата, 25/22.</p></div>
+<a class="item-map" href="https://yandex.ru/maps/?text=%D0%A3%D0%BB%D1%8C%D1%8F%D0%BD%D0%BE%D0%B2%D1%81%D0%BA+%D0%9A%D0%BE%D0%BB%D0%BE%D0%B1%D0%BE%D0%BA-%D0%B3%D0%B5%D0%BE%D0%BB%D0%BE%D0%B3+%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D1%81%D0%B0%D0%BB%D0%BE%D0%BD+%D0%A1%D0%B8%D0%BC%D0%B1%D0%B8%D1%80%D1%86%D0%B8%D1%82+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%9C%D0%B0%D1%80%D0%B0%D1%82%D0%B0+25%2F22" target="_blank" rel="noopener noreferrer" aria-label="Колобок-геолог: найти на карте (откроется новая вкладка)">Найти на карте <span aria-hidden="true">↗</span></a>
+</li>
+</ol></section>
+<p class="list-caution">Нумерация служит для удобства и не задаёт обязательный маршрут. Кнопки для литературных колобков открывают точки из опубликованного маршрута, для геолога — поиск по адресу музея. Перед прогулкой проверьте расположение и доступность фигурок по <a href="https://ulyanovsk.travel/map-kolobok.php" target="_blank" rel="noopener noreferrer">карте туристического портала ↗</a>: квест развивается, отдельные скульптуры могут временно находиться на реставрации.</p>
+<details class="list-references"><summary>Источники полного списка</summary>
+<ul>
+<li id="list-source-directorate-count"><a href="https://ulcreat.mukcbs.org/ru/news/v-ulyanovske-povredili-skulpturu-kolobka-istorika" target="_blank" rel="noopener noreferrer">Дирекция «Ульяновск — литературный город ЮНЕСКО»: состав квеста — 11 фигурок ↗</a> <span>(24.08.2026)</span></li>
+<li id="list-source-route"><a href="https://nashural.ru/mobilnoe-prilozhenie-kuda/marshruty/kolobki-literaturnye-gidy-po-ulyanovsku-simbirsku/" target="_blank" rel="noopener noreferrer">«Наш Урал»: маршрут, подготовленный совместно с дирекцией проекта; названия и координаты ↗</a> <span>(22.09.2026)</span></li>
+<li id="list-source-first-eight"><a href="https://ulpravda.ru/rubrics/nash-krai/taina-kolobkov-raskryta-karta-turisticheskogo-kvesta-stala-dostupna" target="_blank" rel="noopener noreferrer">«Ульяновская правда»: восемь первых персонажей и ориентиры ↗</a> <span>(05.09.2024)</span></li>
+<li id="list-source-ulstu"><a href="https://ulstu.ru/news/18119/" target="_blank" rel="noopener noreferrer">УлГТУ: прогулка по маршруту; ориентиры для Обломова, казака и колобка-ЮНЕСКО ↗</a> <span>(23.09.2026)</span></li>
+<li id="list-source-new-three"><a href="https://www.ulcreat.mukcbs.org/ru/calendar-event-archive/month/2026-07" target="_blank" rel="noopener noreferrer">Дирекция проекта: новые персонажи на Свияге и их литературные прототипы ↗</a> <span>(июль 2026)</span></li>
+<li id="list-source-ammond"><a href="https://www.ammond.store/blog-list.php?ID=35336" target="_blank" rel="noopener noreferrer">«АММОНД»: колобок-геолог, автор и адрес установки ↗</a> <span>(01.08.2025)</span></li>
+</ul></details>
+</section>
 <section class="quiz"><p class="kicker">Проверьте себя</p><h2 class="question">Этот городской квест создан в рамках школьного проекта?</h2><details><summary>Показать ответ</summary><p>Нет. Городской квест — самостоятельный проект. Школьный QR-гид рассказывает о нём и помогает перейти к официальной карте.</p></details></section>
 <section class="sources"><details><summary>Источники и иллюстрации</summary><ul><li><a href="https://ulcreat.mukcbs.org/ru/news/tri-novyh-literaturnyh-kolobka-poyavilis-v-ulyanovske" target="_blank" rel="noopener noreferrer">«Ульяновск — литературный город ЮНЕСКО» — развитие квеста, 10.07.2026 ↗</a></li><li><a href="https://2.mukcbs.org/news/v-nashem-gorode-poselilis-kolobki" target="_blank" rel="noopener noreferrer">Библиотека № 2 имени Н. Г. Зырина — литературные колобки ↗</a></li><li><a href="https://ulyanovsk.travel/map-kolobok.php" target="_blank" rel="noopener noreferrer">Туристическо-информационный портал Ульяновска — карта колобков ↗</a></li></ul><p>Редакция текста: 18.11.2026. Иллюстрация сохранена из исходных материалов проекта; имя фотографа в них не указано.</p></details></section></div>
 <nav class="pager" aria-label="Переход между страницами"><a href="pamyatnik-studentam.html"><small>← Предыдущая страница</small>Памятник влюблённым студентам</a><a class="all" href="index.html">Все страницы</a><a class="next" href="vetrovoy-organ.html"><small>Следующая страница →</small>Ветровой орган</a></nav>
